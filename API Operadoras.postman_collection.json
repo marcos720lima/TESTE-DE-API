@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "8d246afe-faaa-4f69-802e-2932c2a99158",
+		"name": "API Operadoras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43621450",
+		"_collection_link": "https://marcosvinicius-8272723.postman.co/workspace/4553dc0b-7548-4a16-8554-ebd3081b5756/collection/43621450-8d246afe-faaa-4f69-802e-2932c2a99158?action=share&source=collection_link&creator=43621450"
+	},
+	"item": [
+		{
+			"name": "termo_operadora",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar?termo=operadora\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "operadora\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nome_op",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar?termo=unimed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "unimed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
