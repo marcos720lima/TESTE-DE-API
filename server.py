@@ -20,10 +20,13 @@ def buscar_operadoras():
     if not termo:
         return jsonify({"erro": "Informe um termo para busca"}), 400
 
-    
-    resultados = df[df["Razao_Social"].astype(str).str.lower().str.contains(termo, na=False)]
 
-    
+    resultados = df[
+        df["Razao_Social"].astype(str).str.lower().str.contains(termo, na=False) |
+        df["Registro_ANS"].astype(str).str.lower().str.contains(termo, na=False) |
+        df["Representante"].astype(str).str.lower().str.contains(termo, na=False)
+    ]
+
     retorno = resultados[colunas_relevantes] if not resultados.empty else []
 
     print(f"Resultados encontrados: {len(resultados)}") 
